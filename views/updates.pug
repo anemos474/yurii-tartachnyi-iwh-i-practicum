@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= title
+    link(rel="stylesheet", href="/public/css/style.css")
+  body
+    header
+      h1= title
+      a(href="/") Return to the homepage
+
+    form(method="post" action="/update-cobj")
+      .field
+        label(for="name") Name
+        input(type="text" id="name" name="name" required)
+
+      .field
+        label(for="bio") Bio
+        input(type="text" id="bio" name="bio")
+
+      .field
+        label(for="category") Category
+        input(type="text" id="category" name="category")
+
+      button(type="submit") Create record
