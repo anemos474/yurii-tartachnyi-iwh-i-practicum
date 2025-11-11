@@ -13,14 +13,12 @@ html
       table
         thead
           tr
-            th ID
             th Name
             th Bio
             th Category
         tbody
           each item in items
             tr
-              td #{item.id}
               td #{(item.properties && item.properties.name) || ''}
               td #{(item.properties && item.properties.bio) || ''}
               td #{(item.properties && item.properties.category) || ''}
