@@ -1,58 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body, * {
+body { 
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 24px; 
 }
 
-h1 {
-    margin: 1rem;
+h1 { 
+    margin-bottom: 16px; 
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+a.button { 
+    display:inline-block; 
+    padding:8px 12px; 
+    border:1px solid #ddd; 
+    border-radius:8px; 
+    text-decoration:none; 
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin-top: 16px; 
 }
 
-.card__email {
-    font-size: 1rem;
+th, td { 
+    border: 1px solid #e5e7eb; 
+    padding: 8px 10px; 
+    text-align: left; 
 }
 
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+.field { 
+    margin-bottom: 12px; 
 }
 
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+input { 
+    padding: 6px 8px; 
+    width: 320px; 
+}
+
+button { 
+    padding: 8px 12px; 
+}
+
+/* ==== Update Form Page Styling ==== */
+
+form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 6px;
+  margin-left: 0;
+  font-weight: 600;
 }
 
 input[type="text"] {
-    padding: .25rem;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #2563eb;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+header a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* ==== Alert Styling ==== */
+
+.alert.success {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 12px 16px;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #34d399;
+  border-radius: 6px;
+  font-size: 15px;
+  text-align: center;
 }
