@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= title
+    link(rel="stylesheet", href="/public/css/style.css")
+  body
+    header
+      h1 Integrating With HubSpot I Practicum — Homepage
+      a.button(href="/update-cobj") Add to this table
+
+    if items && items.length
+      table
+        thead
+          tr
+            th ID
+            th Name
+            th Bio
+            th Category
+        tbody
+          each item in items
+            tr
+              td #{item.id}
+              td #{(item.properties && item.properties.name) || ''}
+              td #{(item.properties && item.properties.bio) || ''}
+              td #{(item.properties && item.properties.category) || ''}
+    else
+      p No records yet.
+
+    footer
+      p
+        | Return to the 
+        a(href="/") homepage
